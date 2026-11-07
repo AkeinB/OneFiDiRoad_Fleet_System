@@ -20,7 +20,7 @@ namespace OneFiDiRoad_Fleet_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ShowScreen();
+            //ShowScreen();
 
         }
 
@@ -28,19 +28,19 @@ namespace OneFiDiRoad_Fleet_System
         public void ShowScreen(UserControl newScreen)
         {
             // 1. Clear whatever screen is currently showing
-            mainContentPanel.Controls.Clear();
+            //mainContentPanel.Controls.Clear();
 
             // 2. Make the new screen stretch to fill the panel completely
             newScreen.Dock = DockStyle.Fill;
 
             // 3. Inject the new screen into the panel
-            mainContentPanel.Controls.Add(newScreen);
+            //mainContentPanel.Controls.Add(newScreen);
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ShowScreen();
+            //ShowScreen();
         }
     }
    }
