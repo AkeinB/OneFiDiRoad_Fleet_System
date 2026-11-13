@@ -12,35 +12,32 @@ namespace OneFiDiRoad_Fleet_System
 {
     public partial class MainWindow : Form
     {
-       
+       private readonly ONE_FI_DI_ROAD_DBEntities OneFiDiRoad;
+        private readonly Login _loginForm;
+        
         public MainWindow()
         {
             InitializeComponent();
+            OneFiDiRoad = new ONE_FI_DI_ROAD_DBEntities();
+            ShowScreen(new HomeScreen());
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //ShowScreen();
-
-        }
+       
 
         //helper method to show a new screen in the main content panel
         public void ShowScreen(UserControl newScreen)
         {
             // 1. Clear whatever screen is currently showing
-            //mainContentPanel.Controls.Clear();
+            PL_MainContent.Controls.Clear();
 
             // 2. Make the new screen stretch to fill the panel completely
             newScreen.Dock = DockStyle.Fill;
 
             // 3. Inject the new screen into the panel
-            //mainContentPanel.Controls.Add(newScreen);
+            PL_MainContent.Controls.Add(newScreen);
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //ShowScreen();
-        }
+
     }
    }
