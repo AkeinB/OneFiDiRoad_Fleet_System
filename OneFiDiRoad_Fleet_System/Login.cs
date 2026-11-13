@@ -34,26 +34,47 @@ namespace OneFiDiRoad_Fleet_System
 
 
                 //Query the database to find a user with the provided username, hashed password and active flag
-                var user = OneFiDiRoad.Users.FirstOrDefault(u =>
-                    u.UserName == userName && u.PasswordHash == password && u.IsActive == true);
+                //==============================================================================================
 
+
+                // Check if the user name exists in the database
+                var user = OneFiDiRoad.Users.FirstOrDefault(u =>
+                    u.UserName == userName);
 
                 if (user == null)
                 {
                     MessageBox.Show("Please provide valid credentials");
                     return;
                 }
-                else
+
+                // Check if the password is correct and the user is active
+                bool isLoginValid = (user.PasswordHash == password && user.IsActive == true);
+                
+                // Get the user ID of the found user
+                var userId = user.UserID;
+
+                //track login in history and applies it to the database
+                var loginhistory = new LoginHistory();
                 {
-
-                    //function to track login in history
-
-
-
-                    var mainWindow = new MainWindow();
-                    mainWindow.Show();
-                    this.Hide();
+                    loginhistory.UserID = userId;
+                    loginhistory.LoginDateTime = DateTime.Now;
+                    loginhistory.GainedAccess = isLoginValid;//applies "True" or "False" to the database depending on the validity of the login
                 }
+                OneFiDiRoad.LoginHistories.Add(loginhistory);
+                OneFiDiRoad.SaveChanges();
+                
+
+                //Block entry if invalid, or proceed if valid
+                if (!isLoginValid)
+                {
+                    MessageBox.Show("Please provide valid credentials");
+                    return;
+                }
+
+                var mainWindow = new MainWindow(this, user);
+                mainWindow.Show();
+                this.Hide();
+                
             }
             catch (Exception)
             {

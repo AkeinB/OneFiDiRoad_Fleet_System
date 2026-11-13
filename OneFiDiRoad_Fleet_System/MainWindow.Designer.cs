@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.PL_MainContent = new System.Windows.Forms.Panel();
-            this.PL_UserBar = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.PB_Logo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,14 +41,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.PL_MainContent = new System.Windows.Forms.Panel();
+            this.PL_UserBar = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LB_DisplayUserRoles = new System.Windows.Forms.Label();
             this.LB_DisplayUserName = new System.Windows.Forms.Label();
             this.PB_DisplayRoleImage = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            this.PL_UserBar.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Logo)).BeginInit();
+            this.PL_UserBar.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_DisplayRoleImage)).BeginInit();
             this.SuspendLayout();
@@ -88,25 +88,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.462686F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(228, 951);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // PL_MainContent
-            // 
-            this.PL_MainContent.AutoScroll = true;
-            this.PL_MainContent.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PL_MainContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PL_MainContent.Location = new System.Drawing.Point(228, 0);
-            this.PL_MainContent.Name = "PL_MainContent";
-            this.PL_MainContent.Size = new System.Drawing.Size(1299, 951);
-            this.PL_MainContent.TabIndex = 1;
-            // 
-            // PL_UserBar
-            // 
-            this.PL_UserBar.Controls.Add(this.groupBox2);
-            this.PL_UserBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PL_UserBar.Location = new System.Drawing.Point(228, 0);
-            this.PL_UserBar.Name = "PL_UserBar";
-            this.PL_UserBar.Size = new System.Drawing.Size(1299, 100);
-            this.PL_UserBar.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -237,9 +218,28 @@
             this.label11.Text = "label11";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // PL_MainContent
+            // 
+            this.PL_MainContent.AutoScroll = true;
+            this.PL_MainContent.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.PL_MainContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PL_MainContent.Location = new System.Drawing.Point(228, 0);
+            this.PL_MainContent.Name = "PL_MainContent";
+            this.PL_MainContent.Size = new System.Drawing.Size(1299, 951);
+            this.PL_MainContent.TabIndex = 1;
+            // 
+            // PL_UserBar
+            // 
+            this.PL_UserBar.Controls.Add(this.groupBox2);
+            this.PL_UserBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PL_UserBar.Location = new System.Drawing.Point(228, 0);
+            this.PL_UserBar.Name = "PL_UserBar";
+            this.PL_UserBar.Size = new System.Drawing.Size(1299, 100);
+            this.PL_UserBar.TabIndex = 2;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.LB_DisplayUserRoles);
             this.groupBox2.Controls.Add(this.LB_DisplayUserName);
             this.groupBox2.Controls.Add(this.PB_DisplayRoleImage);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -249,15 +249,15 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
-            // label1
+            // LB_DisplayUserRoles
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Display User Role";
+            this.LB_DisplayUserRoles.AutoSize = true;
+            this.LB_DisplayUserRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_DisplayUserRoles.Location = new System.Drawing.Point(163, 54);
+            this.LB_DisplayUserRoles.Name = "LB_DisplayUserRoles";
+            this.LB_DisplayUserRoles.Size = new System.Drawing.Size(121, 17);
+            this.LB_DisplayUserRoles.TabIndex = 5;
+            this.LB_DisplayUserRoles.Text = "Display User Role";
             // 
             // LB_DisplayUserName
             // 
@@ -287,12 +287,14 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(1235, 761);
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainWindow";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.PL_UserBar.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Logo)).EndInit();
+            this.PL_UserBar.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_DisplayRoleImage)).EndInit();
@@ -318,7 +320,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LB_DisplayUserRoles;
         private System.Windows.Forms.Label LB_DisplayUserName;
         private System.Windows.Forms.PictureBox PB_DisplayRoleImage;
     }

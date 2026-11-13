@@ -4,11 +4,13 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OneFiDiRoad_Fleet_System
 {
     internal class Utils
     {
+        
         // This method takes a password as input and returns its SHA256 hash as a hexadecimal string
         public static string HashPassword(string password)
         {
