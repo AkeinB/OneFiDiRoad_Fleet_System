@@ -35,8 +35,6 @@ namespace OneFiDiRoad_Fleet_System
 
                 //Query the database to find a user with the provided username, hashed password and active flag
                 //==============================================================================================
-
-
                 // Check if the user name exists in the database
                 var user = OneFiDiRoad.Users.FirstOrDefault(u =>
                     u.UserName == userName);
@@ -60,6 +58,7 @@ namespace OneFiDiRoad_Fleet_System
                     loginhistory.LoginDateTime = DateTime.Now;
                     loginhistory.GainedAccess = isLoginValid;//applies "True" or "False" to the database depending on the validity of the login
                 }
+                //Add the login history to the database and save changes
                 OneFiDiRoad.LoginHistories.Add(loginhistory);
                 OneFiDiRoad.SaveChanges();
                 
@@ -71,6 +70,7 @@ namespace OneFiDiRoad_Fleet_System
                     return;
                 }
 
+                // If the login is valid, open the main window and hide the login form
                 var mainWindow = new MainWindow(this, user);
                 mainWindow.Show();
                 this.Hide();
@@ -82,8 +82,8 @@ namespace OneFiDiRoad_Fleet_System
                 MessageBox.Show("Please enter your username and password.");
             }
         }
-
-        private void CB_ShowPassword_CheckedChanged(object sender, EventArgs e)
+        
+        private void CB_ShowPassword_CheckedChanged(object sender, EventArgs e)//event handler to show or hide the password in the password textbox
         {
             if (CHB_ShowPassword.Checked)
             {
