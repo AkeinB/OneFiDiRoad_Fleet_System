@@ -15,7 +15,10 @@ namespace OneFiDiRoad_Fleet_System
         private readonly ONE_FI_DI_ROAD_DBEntities OneFiDiRoad;
         private readonly Login _loginForm;
         private readonly User _userinfo;
-        
+
+        private Color originalBackColor;
+        private Color originalForeColor;
+
         public MainWindow(Login loginForm, User userinfo)
         {
             InitializeComponent();
@@ -26,6 +29,7 @@ namespace OneFiDiRoad_Fleet_System
             _userinfo = userinfo;
         }
 
+        //Loads the main window and displays the user's name and role
         private void MainWindow_Load(object sender, EventArgs e)
         {
             LB_DisplayUserName.Text = _userinfo.FirstName + " " + _userinfo.LastName;
@@ -62,18 +66,53 @@ namespace OneFiDiRoad_Fleet_System
                 OneFiDiRoad.Dispose();
         }
 
+        //======================================================================================================================================================
         //helper method to show a new screen in the main content panel
         public void ShowScreen(UserControl newScreen)
         {
-            // 1. Clear whatever screen is currently showing
+            // Dispose of the current screen if it exists
+            if (PL_MainContent.Controls.Count > 0)
+            {
+                PL_MainContent.Controls[0].Dispose();
+            }
+
+            //Clear whatever screen is currently showing
             PL_MainContent.Controls.Clear();
 
-            // 2. Make the new screen stretch to fill the panel completely
+            //Make the new screen stretch to fill the panel completely
             newScreen.Dock = DockStyle.Fill;
 
-            // 3. Inject the new screen into the panel
+            // Inject the new screen into the panel
             PL_MainContent.Controls.Add(newScreen);
 
+        }
+        //======================================================================================================================================================
+        //Mouse enter and leave events for labels to highlight them
+        private void label2_MouseEnter(object sender, EventArgs e)
+        {
+            HighlightLabel((Label)sender);
+        }
+
+        private void label2_MouseLeave(object sender, EventArgs e)
+        {
+            RestoreLabel((Label)sender);
+        }
+
+        //==========================================================================================================================================================
+        //Highlight helper functions for Labels
+        private void HighlightLabel(Label lbl)
+        {
+            originalBackColor = lbl.BackColor;
+            originalForeColor = lbl.ForeColor;
+
+            lbl.BackColor = Color.Yellow;
+            lbl.ForeColor = Color.Black;
+        }
+
+        private void RestoreLabel(Label lbl)
+        {
+            lbl.BackColor = originalBackColor;
+            lbl.ForeColor = originalForeColor;
         }
 
        
