@@ -56,7 +56,13 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.LB_VehicleServiceAmount = new System.Windows.Forms.Label();
+            this.LB_TotalVehicleAmount = new System.Windows.Forms.Label();
+            this.LB_AvailableVehicleAmount = new System.Windows.Forms.Label();
+            this.LB_TotalDriversAmount = new System.Windows.Forms.Label();
+            this.LB_AvailableDriversAmount = new System.Windows.Forms.Label();
+            this.LB_MonthAmount = new System.Windows.Forms.Label();
+            this.LB_ActiveTripsAmount = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -87,11 +93,14 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.LB_AvailableVehicleAmount, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LB_TotalVehicleAmount, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(199, 75);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -132,7 +141,7 @@
             this.groupBox2.Controls.Add(this.tableLayoutPanel2);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Location = new System.Drawing.Point(64, 388);
+            this.groupBox2.Location = new System.Drawing.Point(636, 191);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(462, 160);
             this.groupBox2.TabIndex = 3;
@@ -140,9 +149,12 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.LB_AvailableDriversAmount, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.LB_TotalDriversAmount, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(193, 61);
@@ -193,7 +205,7 @@
             this.groupBox3.Controls.Add(this.pictureBox3);
             this.groupBox3.Controls.Add(this.tableLayoutPanel3);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(64, 588);
+            this.groupBox3.Location = new System.Drawing.Point(64, 378);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(462, 160);
             this.groupBox3.TabIndex = 4;
@@ -201,9 +213,12 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.LB_ActiveTripsAmount, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.LB_MonthAmount, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label8, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.LB_Month, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(199, 61);
@@ -256,13 +271,14 @@
             this.label8.Size = new System.Drawing.Size(59, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "Active trips";
+            this.label8.Visible = false;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.pictureBox4);
             this.groupBox4.Controls.Add(this.tableLayoutPanel4);
             this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Location = new System.Drawing.Point(636, 191);
+            this.groupBox4.Location = new System.Drawing.Point(64, 568);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(462, 160);
             this.groupBox4.TabIndex = 5;
@@ -352,7 +368,7 @@
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.LB_VehicleServiceAmount, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(199, 61);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
@@ -361,14 +377,69 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(191, 60);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
-            // label7
+            // LB_VehicleServiceAmount
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(19, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "00";
+            this.LB_VehicleServiceAmount.AutoSize = true;
+            this.LB_VehicleServiceAmount.Location = new System.Drawing.Point(3, 0);
+            this.LB_VehicleServiceAmount.Name = "LB_VehicleServiceAmount";
+            this.LB_VehicleServiceAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_VehicleServiceAmount.TabIndex = 1;
+            this.LB_VehicleServiceAmount.Text = "00";
+            // 
+            // LB_TotalVehicleAmount
+            // 
+            this.LB_TotalVehicleAmount.AutoSize = true;
+            this.LB_TotalVehicleAmount.Location = new System.Drawing.Point(144, 0);
+            this.LB_TotalVehicleAmount.Name = "LB_TotalVehicleAmount";
+            this.LB_TotalVehicleAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_TotalVehicleAmount.TabIndex = 2;
+            this.LB_TotalVehicleAmount.Text = "00";
+            // 
+            // LB_AvailableVehicleAmount
+            // 
+            this.LB_AvailableVehicleAmount.AutoSize = true;
+            this.LB_AvailableVehicleAmount.Location = new System.Drawing.Point(144, 30);
+            this.LB_AvailableVehicleAmount.Name = "LB_AvailableVehicleAmount";
+            this.LB_AvailableVehicleAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_AvailableVehicleAmount.TabIndex = 3;
+            this.LB_AvailableVehicleAmount.Text = "00";
+            // 
+            // LB_TotalDriversAmount
+            // 
+            this.LB_TotalDriversAmount.AutoSize = true;
+            this.LB_TotalDriversAmount.Location = new System.Drawing.Point(149, 0);
+            this.LB_TotalDriversAmount.Name = "LB_TotalDriversAmount";
+            this.LB_TotalDriversAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_TotalDriversAmount.TabIndex = 3;
+            this.LB_TotalDriversAmount.Text = "00";
+            // 
+            // LB_AvailableDriversAmount
+            // 
+            this.LB_AvailableDriversAmount.AutoSize = true;
+            this.LB_AvailableDriversAmount.Location = new System.Drawing.Point(149, 30);
+            this.LB_AvailableDriversAmount.Name = "LB_AvailableDriversAmount";
+            this.LB_AvailableDriversAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_AvailableDriversAmount.TabIndex = 4;
+            this.LB_AvailableDriversAmount.Text = "00";
+            // 
+            // LB_MonthAmount
+            // 
+            this.LB_MonthAmount.AutoSize = true;
+            this.LB_MonthAmount.Location = new System.Drawing.Point(149, 0);
+            this.LB_MonthAmount.Name = "LB_MonthAmount";
+            this.LB_MonthAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_MonthAmount.TabIndex = 3;
+            this.LB_MonthAmount.Text = "00";
+            // 
+            // LB_ActiveTripsAmount
+            // 
+            this.LB_ActiveTripsAmount.AutoSize = true;
+            this.LB_ActiveTripsAmount.Location = new System.Drawing.Point(149, 30);
+            this.LB_ActiveTripsAmount.Name = "LB_ActiveTripsAmount";
+            this.LB_ActiveTripsAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_ActiveTripsAmount.TabIndex = 4;
+            this.LB_ActiveTripsAmount.Text = "00";
+            this.LB_ActiveTripsAmount.Visible = false;
             // 
             // HomeScreen
             // 
@@ -382,6 +453,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "HomeScreen";
             this.Size = new System.Drawing.Size(1299, 951);
+            this.Load += new System.EventHandler(this.HomeScreen_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -440,7 +512,13 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LB_VehicleServiceAmount;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label LB_AvailableVehicleAmount;
+        private System.Windows.Forms.Label LB_TotalVehicleAmount;
+        private System.Windows.Forms.Label LB_AvailableDriversAmount;
+        private System.Windows.Forms.Label LB_TotalDriversAmount;
+        private System.Windows.Forms.Label LB_ActiveTripsAmount;
+        private System.Windows.Forms.Label LB_MonthAmount;
     }
 }

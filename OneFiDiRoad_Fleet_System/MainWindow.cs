@@ -12,7 +12,7 @@ namespace OneFiDiRoad_Fleet_System
 {
     public partial class MainWindow : Form
     {
-       private readonly ONE_FI_DI_ROAD_DBEntities OneFiDiRoad;
+        private readonly ONE_FI_DI_ROAD_DBEntities OneFiDiRoad;
         private readonly Login _loginForm;
         private readonly User _userinfo;
         
@@ -42,6 +42,7 @@ namespace OneFiDiRoad_Fleet_System
             if (result == DialogResult.No)
             {
                 e.Cancel = true; // Prevents closing
+                return;
             }
             else
             {
