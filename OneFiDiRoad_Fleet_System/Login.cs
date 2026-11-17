@@ -18,6 +18,7 @@ namespace OneFiDiRoad_Fleet_System
         {
             InitializeComponent();
             OneFiDiRoad = new ONE_FI_DI_ROAD_DBEntities();
+            //Theme.ApplyTheme(this);
 
         }
 

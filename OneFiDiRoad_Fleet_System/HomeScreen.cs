@@ -17,6 +17,14 @@ namespace OneFiDiRoad_Fleet_System
         {
             InitializeComponent();
             OneFiDiRoad = new ONE_FI_DI_ROAD_DBEntities();
+
+            GB_Vehicles.MouseEnter += (s, e) => Utils.AnimateGroupBoxStart(GB_Vehicles);
+            GB_Vehicles.MouseLeave += (s, e) => Utils.AnimateGroupBoxStop(GB_Vehicles);
+
+            Utils.hoverTimerGBs.Interval = 10;
+            Utils.hoverTimerGBs.Tick += Utils.HoverTimer_TickGroupBox;
+            Theme.ApplyTheme(this);
+
         }
 
         private void HomeScreen_Load(object sender, EventArgs e)
@@ -39,5 +47,7 @@ namespace OneFiDiRoad_Fleet_System
             
 
         }
+
+       
     }
 }

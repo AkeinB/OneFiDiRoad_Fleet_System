@@ -80,6 +80,9 @@
     <Compile Include="Assignment.cs">
       <DependentUpon>OneFiDiRoad_Fleet_SystemDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="ButtonStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Driver.cs">
       <DependentUpon>OneFiDiRoad_Fleet_SystemDB.tt</DependentUpon>
     </Compile>
@@ -127,6 +130,7 @@
     <Compile Include="ServiceSchedule.cs">
       <DependentUpon>OneFiDiRoad_Fleet_SystemDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Theme.cs" />
     <Compile Include="Trip.cs">
       <DependentUpon>OneFiDiRoad_Fleet_SystemDB.tt</DependentUpon>
     </Compile>

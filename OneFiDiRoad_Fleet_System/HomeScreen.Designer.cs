@@ -28,68 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GB_Vehicles = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.LB_AvailableVehicleAmount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.LB_TotalVehicleAmount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.GB_Drivers = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.LB_AvailableDriversAmount = new System.Windows.Forms.Label();
+            this.LB_TotalDriversAmount = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.GB_TripsThisMonth = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.LB_ActiveTripsAmount = new System.Windows.Forms.Label();
+            this.LB_MonthAmount = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.LB_Month = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.GB_FuelCostThisMonth = new System.Windows.Forms.GroupBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.LB_Cost = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.GB_VehiclesDueForService = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.LB_VehicleServiceAmount = new System.Windows.Forms.Label();
-            this.LB_TotalVehicleAmount = new System.Windows.Forms.Label();
-            this.LB_AvailableVehicleAmount = new System.Windows.Forms.Label();
-            this.LB_TotalDriversAmount = new System.Windows.Forms.Label();
-            this.LB_AvailableDriversAmount = new System.Windows.Forms.Label();
-            this.LB_MonthAmount = new System.Windows.Forms.Label();
-            this.LB_ActiveTripsAmount = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.label13 = new System.Windows.Forms.Label();
+            this.GB_Vehicles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.GB_Drivers.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.GB_TripsThisMonth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.GB_FuelCostThisMonth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.GB_VehiclesDueForService.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // GB_Vehicles
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(64, 191);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(462, 160);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.GB_Vehicles.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.GB_Vehicles.Controls.Add(this.pictureBox1);
+            this.GB_Vehicles.Controls.Add(this.tableLayoutPanel1);
+            this.GB_Vehicles.Controls.Add(this.label1);
+            this.GB_Vehicles.Location = new System.Drawing.Point(64, 191);
+            this.GB_Vehicles.Name = "GB_Vehicles";
+            this.GB_Vehicles.Size = new System.Drawing.Size(462, 160);
+            this.GB_Vehicles.TabIndex = 0;
+            this.GB_Vehicles.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(20, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 111);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -109,6 +118,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(191, 60);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+            // LB_AvailableVehicleAmount
+            // 
+            this.LB_AvailableVehicleAmount.AutoSize = true;
+            this.LB_AvailableVehicleAmount.Location = new System.Drawing.Point(144, 30);
+            this.LB_AvailableVehicleAmount.Name = "LB_AvailableVehicleAmount";
+            this.LB_AvailableVehicleAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_AvailableVehicleAmount.TabIndex = 3;
+            this.LB_AvailableVehicleAmount.Text = "00";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -127,6 +145,15 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Available Vehicles";
             // 
+            // LB_TotalVehicleAmount
+            // 
+            this.LB_TotalVehicleAmount.AutoSize = true;
+            this.LB_TotalVehicleAmount.Location = new System.Drawing.Point(144, 0);
+            this.LB_TotalVehicleAmount.Name = "LB_TotalVehicleAmount";
+            this.LB_TotalVehicleAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_TotalVehicleAmount.TabIndex = 2;
+            this.LB_TotalVehicleAmount.Text = "00";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -136,16 +163,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Vehicles";
             // 
-            // groupBox2
+            // GB_Drivers
             // 
-            this.groupBox2.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Location = new System.Drawing.Point(636, 191);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(462, 160);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
+            this.GB_Drivers.Controls.Add(this.tableLayoutPanel2);
+            this.GB_Drivers.Controls.Add(this.label6);
+            this.GB_Drivers.Controls.Add(this.pictureBox2);
+            this.GB_Drivers.Location = new System.Drawing.Point(636, 191);
+            this.GB_Drivers.Name = "GB_Drivers";
+            this.GB_Drivers.Size = new System.Drawing.Size(462, 160);
+            this.GB_Drivers.TabIndex = 3;
+            this.GB_Drivers.TabStop = false;
             // 
             // tableLayoutPanel2
             // 
@@ -164,6 +191,24 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(191, 60);
             this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // LB_AvailableDriversAmount
+            // 
+            this.LB_AvailableDriversAmount.AutoSize = true;
+            this.LB_AvailableDriversAmount.Location = new System.Drawing.Point(149, 30);
+            this.LB_AvailableDriversAmount.Name = "LB_AvailableDriversAmount";
+            this.LB_AvailableDriversAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_AvailableDriversAmount.TabIndex = 4;
+            this.LB_AvailableDriversAmount.Text = "00";
+            // 
+            // LB_TotalDriversAmount
+            // 
+            this.LB_TotalDriversAmount.AutoSize = true;
+            this.LB_TotalDriversAmount.Location = new System.Drawing.Point(149, 0);
+            this.LB_TotalDriversAmount.Name = "LB_TotalDriversAmount";
+            this.LB_TotalDriversAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_TotalDriversAmount.TabIndex = 3;
+            this.LB_TotalDriversAmount.Text = "00";
             // 
             // label4
             // 
@@ -200,16 +245,24 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // groupBox3
+            // GB_TripsThisMonth
             // 
-            this.groupBox3.Controls.Add(this.pictureBox3);
-            this.groupBox3.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(64, 378);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(462, 160);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
+            this.GB_TripsThisMonth.Controls.Add(this.pictureBox3);
+            this.GB_TripsThisMonth.Controls.Add(this.tableLayoutPanel3);
+            this.GB_TripsThisMonth.Controls.Add(this.label9);
+            this.GB_TripsThisMonth.Location = new System.Drawing.Point(64, 378);
+            this.GB_TripsThisMonth.Name = "GB_TripsThisMonth";
+            this.GB_TripsThisMonth.Size = new System.Drawing.Size(462, 160);
+            this.GB_TripsThisMonth.TabIndex = 4;
+            this.GB_TripsThisMonth.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(20, 19);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(140, 111);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
             // tableLayoutPanel3
             // 
@@ -229,6 +282,35 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(191, 60);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
+            // LB_ActiveTripsAmount
+            // 
+            this.LB_ActiveTripsAmount.AutoSize = true;
+            this.LB_ActiveTripsAmount.Location = new System.Drawing.Point(149, 30);
+            this.LB_ActiveTripsAmount.Name = "LB_ActiveTripsAmount";
+            this.LB_ActiveTripsAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_ActiveTripsAmount.TabIndex = 4;
+            this.LB_ActiveTripsAmount.Text = "00";
+            this.LB_ActiveTripsAmount.Visible = false;
+            // 
+            // LB_MonthAmount
+            // 
+            this.LB_MonthAmount.AutoSize = true;
+            this.LB_MonthAmount.Location = new System.Drawing.Point(149, 0);
+            this.LB_MonthAmount.Name = "LB_MonthAmount";
+            this.LB_MonthAmount.Size = new System.Drawing.Size(19, 13);
+            this.LB_MonthAmount.TabIndex = 3;
+            this.LB_MonthAmount.Text = "00";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Active trips";
+            this.label8.Visible = false;
+            // 
             // LB_Month
             // 
             this.LB_Month.AutoSize = true;
@@ -247,42 +329,16 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "Trips this Month";
             // 
-            // pictureBox1
+            // GB_FuelCostThisMonth
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(20, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 111);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(20, 19);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(140, 111);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 30);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Active trips";
-            this.label8.Visible = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.pictureBox4);
-            this.groupBox4.Controls.Add(this.tableLayoutPanel4);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Location = new System.Drawing.Point(64, 568);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(462, 160);
-            this.groupBox4.TabIndex = 5;
-            this.groupBox4.TabStop = false;
+            this.GB_FuelCostThisMonth.Controls.Add(this.pictureBox4);
+            this.GB_FuelCostThisMonth.Controls.Add(this.tableLayoutPanel4);
+            this.GB_FuelCostThisMonth.Controls.Add(this.label11);
+            this.GB_FuelCostThisMonth.Location = new System.Drawing.Point(64, 568);
+            this.GB_FuelCostThisMonth.Name = "GB_FuelCostThisMonth";
+            this.GB_FuelCostThisMonth.Size = new System.Drawing.Size(462, 160);
+            this.GB_FuelCostThisMonth.TabIndex = 5;
+            this.GB_FuelCostThisMonth.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -308,15 +364,6 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(191, 60);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(196, 33);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Fuel Cost This Month";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -335,16 +382,25 @@
             this.LB_Cost.TabIndex = 1;
             this.LB_Cost.Text = "0.00";
             // 
-            // groupBox5
+            // label11
             // 
-            this.groupBox5.Controls.Add(this.pictureBox5);
-            this.groupBox5.Controls.Add(this.tableLayoutPanel5);
-            this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Location = new System.Drawing.Point(636, 388);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(462, 160);
-            this.groupBox5.TabIndex = 6;
-            this.groupBox5.TabStop = false;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(196, 33);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 13);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Fuel Cost This Month";
+            // 
+            // GB_VehiclesDueForService
+            // 
+            this.GB_VehiclesDueForService.Controls.Add(this.pictureBox5);
+            this.GB_VehiclesDueForService.Controls.Add(this.tableLayoutPanel5);
+            this.GB_VehiclesDueForService.Controls.Add(this.label13);
+            this.GB_VehiclesDueForService.Location = new System.Drawing.Point(636, 388);
+            this.GB_VehiclesDueForService.Name = "GB_VehiclesDueForService";
+            this.GB_VehiclesDueForService.Size = new System.Drawing.Size(462, 160);
+            this.GB_VehiclesDueForService.TabIndex = 6;
+            this.GB_VehiclesDueForService.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -353,15 +409,6 @@
             this.pictureBox5.Size = new System.Drawing.Size(140, 111);
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(196, 33);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(127, 13);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Vehicles Due For Service";
             // 
             // tableLayoutPanel5
             // 
@@ -386,96 +433,50 @@
             this.LB_VehicleServiceAmount.TabIndex = 1;
             this.LB_VehicleServiceAmount.Text = "00";
             // 
-            // LB_TotalVehicleAmount
+            // label13
             // 
-            this.LB_TotalVehicleAmount.AutoSize = true;
-            this.LB_TotalVehicleAmount.Location = new System.Drawing.Point(144, 0);
-            this.LB_TotalVehicleAmount.Name = "LB_TotalVehicleAmount";
-            this.LB_TotalVehicleAmount.Size = new System.Drawing.Size(19, 13);
-            this.LB_TotalVehicleAmount.TabIndex = 2;
-            this.LB_TotalVehicleAmount.Text = "00";
-            // 
-            // LB_AvailableVehicleAmount
-            // 
-            this.LB_AvailableVehicleAmount.AutoSize = true;
-            this.LB_AvailableVehicleAmount.Location = new System.Drawing.Point(144, 30);
-            this.LB_AvailableVehicleAmount.Name = "LB_AvailableVehicleAmount";
-            this.LB_AvailableVehicleAmount.Size = new System.Drawing.Size(19, 13);
-            this.LB_AvailableVehicleAmount.TabIndex = 3;
-            this.LB_AvailableVehicleAmount.Text = "00";
-            // 
-            // LB_TotalDriversAmount
-            // 
-            this.LB_TotalDriversAmount.AutoSize = true;
-            this.LB_TotalDriversAmount.Location = new System.Drawing.Point(149, 0);
-            this.LB_TotalDriversAmount.Name = "LB_TotalDriversAmount";
-            this.LB_TotalDriversAmount.Size = new System.Drawing.Size(19, 13);
-            this.LB_TotalDriversAmount.TabIndex = 3;
-            this.LB_TotalDriversAmount.Text = "00";
-            // 
-            // LB_AvailableDriversAmount
-            // 
-            this.LB_AvailableDriversAmount.AutoSize = true;
-            this.LB_AvailableDriversAmount.Location = new System.Drawing.Point(149, 30);
-            this.LB_AvailableDriversAmount.Name = "LB_AvailableDriversAmount";
-            this.LB_AvailableDriversAmount.Size = new System.Drawing.Size(19, 13);
-            this.LB_AvailableDriversAmount.TabIndex = 4;
-            this.LB_AvailableDriversAmount.Text = "00";
-            // 
-            // LB_MonthAmount
-            // 
-            this.LB_MonthAmount.AutoSize = true;
-            this.LB_MonthAmount.Location = new System.Drawing.Point(149, 0);
-            this.LB_MonthAmount.Name = "LB_MonthAmount";
-            this.LB_MonthAmount.Size = new System.Drawing.Size(19, 13);
-            this.LB_MonthAmount.TabIndex = 3;
-            this.LB_MonthAmount.Text = "00";
-            // 
-            // LB_ActiveTripsAmount
-            // 
-            this.LB_ActiveTripsAmount.AutoSize = true;
-            this.LB_ActiveTripsAmount.Location = new System.Drawing.Point(149, 30);
-            this.LB_ActiveTripsAmount.Name = "LB_ActiveTripsAmount";
-            this.LB_ActiveTripsAmount.Size = new System.Drawing.Size(19, 13);
-            this.LB_ActiveTripsAmount.TabIndex = 4;
-            this.LB_ActiveTripsAmount.Text = "00";
-            this.LB_ActiveTripsAmount.Visible = false;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(196, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(127, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Vehicles Due For Service";
             // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.GB_VehiclesDueForService);
+            this.Controls.Add(this.GB_FuelCostThisMonth);
+            this.Controls.Add(this.GB_TripsThisMonth);
+            this.Controls.Add(this.GB_Drivers);
+            this.Controls.Add(this.GB_Vehicles);
             this.Name = "HomeScreen";
             this.Size = new System.Drawing.Size(1299, 951);
             this.Load += new System.EventHandler(this.HomeScreen_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.GB_Vehicles.ResumeLayout(false);
+            this.GB_Vehicles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.GB_Drivers.ResumeLayout(false);
+            this.GB_Drivers.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.GB_TripsThisMonth.ResumeLayout(false);
+            this.GB_TripsThisMonth.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.GB_FuelCostThisMonth.ResumeLayout(false);
+            this.GB_FuelCostThisMonth.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.GB_VehiclesDueForService.ResumeLayout(false);
+            this.GB_VehiclesDueForService.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
@@ -485,31 +486,31 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox GB_Vehicles;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox GB_Drivers;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox GB_TripsThisMonth;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label LB_Month;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox GB_FuelCostThisMonth;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label LB_Cost;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox GB_VehiclesDueForService;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label LB_VehicleServiceAmount;

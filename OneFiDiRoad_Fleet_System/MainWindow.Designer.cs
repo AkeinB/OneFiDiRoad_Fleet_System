@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.PB_Logo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,23 +42,21 @@
             this.label11 = new System.Windows.Forms.Label();
             this.PL_MainContent = new System.Windows.Forms.Panel();
             this.PL_UserBar = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.LB_DisplayUserRoles = new System.Windows.Forms.Label();
             this.LB_DisplayUserName = new System.Windows.Forms.Label();
             this.PB_DisplayRoleImage = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Logo)).BeginInit();
             this.PL_UserBar.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_DisplayRoleImage)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
@@ -70,6 +67,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -89,19 +87,9 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(228, 951);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.PB_Logo);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(222, 155);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            // 
             // PB_Logo
             // 
-            this.PB_Logo.Location = new System.Drawing.Point(42, 19);
+            this.PB_Logo.Location = new System.Drawing.Point(38, 19);
             this.PB_Logo.Name = "PB_Logo";
             this.PB_Logo.Size = new System.Drawing.Size(138, 109);
             this.PB_Logo.TabIndex = 0;
@@ -232,30 +220,20 @@
             // 
             // PL_UserBar
             // 
-            this.PL_UserBar.Controls.Add(this.groupBox2);
+            this.PL_UserBar.Controls.Add(this.LB_DisplayUserRoles);
+            this.PL_UserBar.Controls.Add(this.PB_DisplayRoleImage);
+            this.PL_UserBar.Controls.Add(this.LB_DisplayUserName);
             this.PL_UserBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.PL_UserBar.Location = new System.Drawing.Point(228, 0);
             this.PL_UserBar.Name = "PL_UserBar";
             this.PL_UserBar.Size = new System.Drawing.Size(1299, 100);
             this.PL_UserBar.TabIndex = 2;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.LB_DisplayUserRoles);
-            this.groupBox2.Controls.Add(this.LB_DisplayUserName);
-            this.groupBox2.Controls.Add(this.PB_DisplayRoleImage);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1299, 100);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            // 
             // LB_DisplayUserRoles
             // 
             this.LB_DisplayUserRoles.AutoSize = true;
             this.LB_DisplayUserRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_DisplayUserRoles.Location = new System.Drawing.Point(163, 54);
+            this.LB_DisplayUserRoles.Location = new System.Drawing.Point(196, 47);
             this.LB_DisplayUserRoles.Name = "LB_DisplayUserRoles";
             this.LB_DisplayUserRoles.Size = new System.Drawing.Size(121, 17);
             this.LB_DisplayUserRoles.TabIndex = 5;
@@ -265,7 +243,7 @@
             // 
             this.LB_DisplayUserName.AutoSize = true;
             this.LB_DisplayUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_DisplayUserName.Location = new System.Drawing.Point(161, 29);
+            this.LB_DisplayUserName.Location = new System.Drawing.Point(194, 22);
             this.LB_DisplayUserName.Name = "LB_DisplayUserName";
             this.LB_DisplayUserName.Size = new System.Drawing.Size(179, 25);
             this.LB_DisplayUserName.TabIndex = 4;
@@ -273,11 +251,19 @@
             // 
             // PB_DisplayRoleImage
             // 
-            this.PB_DisplayRoleImage.Location = new System.Drawing.Point(17, 19);
+            this.PB_DisplayRoleImage.Location = new System.Drawing.Point(20, 12);
             this.PB_DisplayRoleImage.Name = "PB_DisplayRoleImage";
             this.PB_DisplayRoleImage.Size = new System.Drawing.Size(138, 75);
             this.PB_DisplayRoleImage.TabIndex = 3;
             this.PB_DisplayRoleImage.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.PB_Logo);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(222, 155);
+            this.panel1.TabIndex = 11;
             // 
             // MainWindow
             // 
@@ -294,12 +280,11 @@
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Logo)).EndInit();
             this.PL_UserBar.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.PL_UserBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_DisplayRoleImage)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -309,7 +294,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel PL_MainContent;
         private System.Windows.Forms.Panel PL_UserBar;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox PB_Logo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -321,9 +305,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label LB_DisplayUserRoles;
         private System.Windows.Forms.Label LB_DisplayUserName;
         private System.Windows.Forms.PictureBox PB_DisplayRoleImage;
+        private System.Windows.Forms.Panel panel1;
     }
 }

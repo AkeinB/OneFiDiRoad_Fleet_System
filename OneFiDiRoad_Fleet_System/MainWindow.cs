@@ -25,6 +25,7 @@ namespace OneFiDiRoad_Fleet_System
             this.FormClosing += new FormClosingEventHandler(MainWindow_FormClosing);
             OneFiDiRoad = new ONE_FI_DI_ROAD_DBEntities();
             ShowScreen(new HomeScreen());
+            Theme.ApplyTheme(this);
             _loginForm = loginForm;
             _userinfo = userinfo;
         }
@@ -32,8 +33,15 @@ namespace OneFiDiRoad_Fleet_System
         //Loads the main window and displays the user's name and role
         private void MainWindow_Load(object sender, EventArgs e)
         {
+            // Display the user's name and role in the labels
             LB_DisplayUserName.Text = _userinfo.FirstName + " " + _userinfo.LastName;
             LB_DisplayUserRoles.Text = _userinfo.Role;
+
+            // Set the interval for the hover timer and attach the Tick event handler
+            Utils.hoverTimer.Interval = 15;
+            Utils.hoverTimer.Tick += Utils.HoverTimer_TickLabels;
+
+
         }
 
         // event handler to close open forms when the main window is closed
@@ -90,31 +98,38 @@ namespace OneFiDiRoad_Fleet_System
         //Mouse enter and leave events for labels to highlight them
         private void label2_MouseEnter(object sender, EventArgs e)
         {
-            HighlightLabel((Label)sender);
+            Utils.HighlightLabel((Label)sender);
+            Utils.AnimateLabelStart((Label)sender);
         }
 
         private void label2_MouseLeave(object sender, EventArgs e)
         {
-            RestoreLabel((Label)sender);
+            Utils.RestoreLabel((Label)sender);
+            Utils.AnimateLabelStop((Label)sender);
         }
 
-        //==========================================================================================================================================================
-        //Highlight helper functions for Labels
-        private void HighlightLabel(Label lbl)
-        {
-            originalBackColor = lbl.BackColor;
-            originalForeColor = lbl.ForeColor;
+        
 
-            lbl.BackColor = Color.Yellow;
-            lbl.ForeColor = Color.Black;
-        }
 
-        private void RestoreLabel(Label lbl)
-        {
-            lbl.BackColor = originalBackColor;
-            lbl.ForeColor = originalForeColor;
-        }
+        // Animate the label when hovered over
+        //private void AnimateLabelStart( Label lbl)
+        //{
+        //    //animatedLabel = lbl;
+        //    //growing = true;
 
-       
+        //    //hoverTimer.Start();
+        //}
+
+        //private void AnimateLabelStop(Label lbl)
+        //{
+        //    animatedLabel = lbl;
+        //    growing = false;
+        //    hoverTimer.Start();
+        //}
+
+
+        
+
+
     }
    }
