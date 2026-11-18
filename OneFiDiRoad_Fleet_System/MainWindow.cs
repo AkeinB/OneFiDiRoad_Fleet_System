@@ -16,18 +16,73 @@ namespace OneFiDiRoad_Fleet_System
         private readonly Login _loginForm;
         private readonly User _userinfo;
 
-        private Color originalBackColor;
-        private Color originalForeColor;
-
         public MainWindow(Login loginForm, User userinfo)
         {
             InitializeComponent();
             this.FormClosing += new FormClosingEventHandler(MainWindow_FormClosing);
             OneFiDiRoad = new ONE_FI_DI_ROAD_DBEntities();
-            ShowScreen(new HomeScreen());
+            ShowScreen(new HomeScreen1());
             Theme.ApplyTheme(this);
             _loginForm = loginForm;
             _userinfo = userinfo;
+
+            //======================================================================================================================================================
+            //Mouse enter and leave events for labels to highlight them
+            //LB_Home.MouseEnter += (s, e) => Utils.AnimateLabelStart(LB_Home);
+            //LB_Home.MouseLeave += (s, e) => Utils.AnimateLabelStop(LB_Home);
+            LB_Home.MouseEnter += (s, e) => Utils.HighlightLabel(LB_Home);
+            LB_Home.MouseLeave += (s, e) => Utils.RestoreLabel(LB_Home);
+
+            //
+            //LB_Vehicles.MouseEnter += (s, e) =>Utils.AnimateLabelStart(LB_Vehicles);
+            //LB_Vehicles.MouseLeave += (s, e) => Utils.AnimateLabelStop(LB_Vehicles);
+            LB_Vehicles.MouseEnter += (s, e) => Utils.HighlightLabel(LB_Vehicles);
+            LB_Vehicles.MouseLeave += (s, e) => Utils.RestoreLabel(LB_Vehicles);
+
+            //
+            //LB_Drivers.MouseEnter += (s, e) => Utils.AnimateLabelStart(LB_Drivers);
+            //LB_Drivers.MouseLeave += (s, e) => Utils.AnimateLabelStop(LB_Drivers);
+            LB_Drivers.MouseEnter += (s, e) => Utils.HighlightLabel(LB_Drivers);
+            LB_Drivers.MouseLeave += (s, e) => Utils.RestoreLabel(LB_Drivers);
+
+            //
+            //LB_Assingments.MouseEnter += (s, e) => Utils.AnimateLabelStart(LB_Assingments);
+            //LB_Assingments.MouseLeave += (s, e) => Utils.AnimateLabelStop(LB_Assingments);
+            LB_Assingments.MouseEnter += (s, e) => Utils.HighlightLabel(LB_Assingments);
+            LB_Assingments.MouseLeave += (s, e) => Utils.RestoreLabel(LB_Assingments);
+
+            //
+            //LB_Trips.MouseEnter += (s, e) => Utils.AnimateLabelStart(LB_Trips);
+            //LB_Trips.MouseLeave += (s, e) => Utils.AnimateLabelStop(LB_Trips);
+            LB_Trips.MouseEnter += (s, e) => Utils.HighlightLabel(LB_Trips);
+            LB_Trips.MouseLeave += (s, e) => Utils.RestoreLabel(LB_Trips);
+
+            //
+            //LB_Fuel.MouseEnter += (s, e) => Utils.AnimateLabelStart(LB_Fuel);
+            //LB_Fuel.MouseLeave += (s, e) => Utils.AnimateLabelStop(LB_Fuel);
+            LB_Fuel.MouseEnter += (s, e) => Utils.HighlightLabel(LB_Fuel);
+            LB_Fuel.MouseLeave += (s, e) => Utils.RestoreLabel(LB_Fuel);
+
+            //
+            LB_Maintenance.MouseEnter += (e, s) => Utils.HighlightLabel(LB_Maintenance);
+            LB_Maintenance.MouseLeave += (e, s) => Utils.RestoreLabel(LB_Maintenance);
+
+            //
+            LB_ServiceSchedule.MouseEnter += (e, s) => Utils.HighlightLabel(LB_ServiceSchedule);
+            LB_ServiceSchedule.MouseLeave += (e, s) => Utils.RestoreLabel(LB_ServiceSchedule);
+
+            //
+            LB_Incidents.MouseEnter += (e, s) => Utils.HighlightLabel(LB_Incidents);
+            LB_Incidents.MouseLeave += (E, S) => Utils.RestoreLabel(LB_Incidents);
+
+            //
+            LB_Reports.MouseEnter += (e, s) => Utils.HighlightLabel(LB_Reports);
+            LB_Reports.MouseLeave += (e, s) => Utils.RestoreLabel(LB_Reports);
+
+            //
+            LB_ManageUsers.MouseEnter += (e, s) => Utils.HighlightLabel(LB_ManageUsers);
+            LB_ManageUsers.MouseLeave += (e, s) => Utils.RestoreLabel(LB_ManageUsers);
+
         }
 
         //Loads the main window and displays the user's name and role
@@ -74,6 +129,62 @@ namespace OneFiDiRoad_Fleet_System
                 OneFiDiRoad.Dispose();
         }
 
+        private void LB_Home_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new HomeScreen1());
+        }
+
+        
+        private void LB_Vehicles_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_Vehicles());
+        }
+
+        private void LB_Drivers_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_Drivers());
+        }
+
+        private void LB_Assingments_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_Assignments());
+        }
+
+        private void LB_Trips_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_Trips());
+        }
+
+        private void LB_Fuel_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_FuelManagement());
+        }
+
+        private void LB_Maintenance_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_Maintenance());
+        }
+
+        private void LB_ServiceSchedule_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_ServiceShedule());
+        }
+
+        private void LB_Incidents_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_IncidentManagement());
+        }
+
+        private void LB_Reports_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_Reports());
+        }
+
+        private void LB_ManageUsers_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UC_ManageUsers());
+        }
+
         //======================================================================================================================================================
         //helper method to show a new screen in the main content panel
         public void ShowScreen(UserControl newScreen)
@@ -94,42 +205,6 @@ namespace OneFiDiRoad_Fleet_System
             PL_MainContent.Controls.Add(newScreen);
 
         }
-        //======================================================================================================================================================
-        //Mouse enter and leave events for labels to highlight them
-        private void label2_MouseEnter(object sender, EventArgs e)
-        {
-            Utils.HighlightLabel((Label)sender);
-            Utils.AnimateLabelStart((Label)sender);
-        }
-
-        private void label2_MouseLeave(object sender, EventArgs e)
-        {
-            Utils.RestoreLabel((Label)sender);
-            Utils.AnimateLabelStop((Label)sender);
-        }
-
-        
-
-
-        // Animate the label when hovered over
-        //private void AnimateLabelStart( Label lbl)
-        //{
-        //    //animatedLabel = lbl;
-        //    //growing = true;
-
-        //    //hoverTimer.Start();
-        //}
-
-        //private void AnimateLabelStop(Label lbl)
-        //{
-        //    animatedLabel = lbl;
-        //    growing = false;
-        //    hoverTimer.Start();
-        //}
-
-
-        
-
 
     }
-   }
+}

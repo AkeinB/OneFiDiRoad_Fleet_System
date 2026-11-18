@@ -63,6 +63,8 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.LB_VehicleServiceAmount = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.PL_UserBar = new System.Windows.Forms.Panel();
+            this.LB_DisplayUserName = new System.Windows.Forms.Label();
             this.GB_Vehicles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -78,11 +80,12 @@
             this.GB_VehiclesDueForService.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
+            this.PL_UserBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // GB_Vehicles
             // 
-            this.GB_Vehicles.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.GB_Vehicles.BackColor = System.Drawing.SystemColors.Control;
             this.GB_Vehicles.Controls.Add(this.pictureBox1);
             this.GB_Vehicles.Controls.Add(this.tableLayoutPanel1);
             this.GB_Vehicles.Controls.Add(this.label1);
@@ -442,11 +445,32 @@
             this.label13.TabIndex = 1;
             this.label13.Text = "Vehicles Due For Service";
             // 
+            // PL_UserBar
+            // 
+            this.PL_UserBar.Controls.Add(this.LB_DisplayUserName);
+            this.PL_UserBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PL_UserBar.Location = new System.Drawing.Point(0, 0);
+            this.PL_UserBar.Name = "PL_UserBar";
+            this.PL_UserBar.Size = new System.Drawing.Size(1299, 140);
+            this.PL_UserBar.TabIndex = 7;
+            this.PL_UserBar.Visible = false;
+            // 
+            // LB_DisplayUserName
+            // 
+            this.LB_DisplayUserName.AutoSize = true;
+            this.LB_DisplayUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_DisplayUserName.Location = new System.Drawing.Point(445, 57);
+            this.LB_DisplayUserName.Name = "LB_DisplayUserName";
+            this.LB_DisplayUserName.Size = new System.Drawing.Size(350, 25);
+            this.LB_DisplayUserName.TabIndex = 4;
+            this.LB_DisplayUserName.Text = "DONT PUT ANYTHNG IN THIS AREA";
+            // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.PL_UserBar);
             this.Controls.Add(this.GB_VehiclesDueForService);
             this.Controls.Add(this.GB_FuelCostThisMonth);
             this.Controls.Add(this.GB_TripsThisMonth);
@@ -480,6 +504,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.PL_UserBar.ResumeLayout(false);
+            this.PL_UserBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -521,5 +547,7 @@
         private System.Windows.Forms.Label LB_TotalDriversAmount;
         private System.Windows.Forms.Label LB_ActiveTripsAmount;
         private System.Windows.Forms.Label LB_MonthAmount;
+        private System.Windows.Forms.Panel PL_UserBar;
+        private System.Windows.Forms.Label LB_DisplayUserName;
     }
 }

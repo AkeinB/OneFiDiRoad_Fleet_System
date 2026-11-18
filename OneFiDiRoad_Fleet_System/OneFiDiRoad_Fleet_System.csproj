@@ -89,6 +89,12 @@
     <Compile Include="Fuel.cs">
       <DependentUpon>OneFiDiRoad_Fleet_SystemDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="HomeScreen1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomeScreen1.Designer.cs">
+      <DependentUpon>HomeScreen1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Incident.cs">
       <DependentUpon>OneFiDiRoad_Fleet_SystemDB.tt</DependentUpon>
     </Compile>
@@ -134,6 +140,66 @@
     <Compile Include="Trip.cs">
       <DependentUpon>OneFiDiRoad_Fleet_SystemDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="UC_Assignments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Assignments.Designer.cs">
+      <DependentUpon>UC_Assignments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Drivers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Drivers.Designer.cs">
+      <DependentUpon>UC_Drivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FuelManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_FuelManagement.Designer.cs">
+      <DependentUpon>UC_FuelManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_IncidentManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_IncidentManagement.Designer.cs">
+      <DependentUpon>UC_IncidentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Maintenance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Maintenance.Designer.cs">
+      <DependentUpon>UC_Maintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Reports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Reports.Designer.cs">
+      <DependentUpon>UC_Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ServiceShedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ServiceShedule.Designer.cs">
+      <DependentUpon>UC_ServiceShedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Trips.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Trips.Designer.cs">
+      <DependentUpon>UC_Trips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ManageUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ManageUsers.Designer.cs">
+      <DependentUpon>UC_ManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Vehicles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Vehicles.Designer.cs">
+      <DependentUpon>UC_Vehicles.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>OneFiDiRoad_Fleet_SystemDB.tt</DependentUpon>
     </Compile>
@@ -147,6 +213,9 @@
     <Compile Include="Vehicle.cs">
       <DependentUpon>OneFiDiRoad_Fleet_SystemDB.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="HomeScreen1.resx">
+      <DependentUpon>HomeScreen1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +233,36 @@
     </Compile>
     <EmbeddedResource Include="HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Assignments.resx">
+      <DependentUpon>UC_Assignments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Drivers.resx">
+      <DependentUpon>UC_Drivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FuelManagement.resx">
+      <DependentUpon>UC_FuelManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_IncidentManagement.resx">
+      <DependentUpon>UC_IncidentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Maintenance.resx">
+      <DependentUpon>UC_Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Reports.resx">
+      <DependentUpon>UC_Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ServiceShedule.resx">
+      <DependentUpon>UC_ServiceShedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Trips.resx">
+      <DependentUpon>UC_Trips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ManageUsers.resx">
+      <DependentUpon>UC_ManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Vehicles.resx">
+      <DependentUpon>UC_Vehicles.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="OneFiDiRoad_Fleet_SystemDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

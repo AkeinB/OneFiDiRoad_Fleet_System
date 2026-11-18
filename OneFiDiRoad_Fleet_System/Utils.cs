@@ -143,7 +143,7 @@ namespace OneFiDiRoad_Fleet_System
                 }
             }
         }
-
+        // Animate the group box when hovered over
         public static void AnimateGroupBoxStart(GroupBox gb)
         {
             originalGroupBoxBackColor = gb.BackColor;

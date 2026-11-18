@@ -39,16 +39,11 @@ namespace OneFiDiRoad_Fleet_System
         {
             foreach (Control control in parent.Controls)
             {
+                
                 // Form
                 if (control is Panel)
                 {
                     control.BackColor = ColorTheme.SecondaryBackground;
-                }
-
-                // User control
-                if (control is UserControl)
-                {
-                    control.BackColor = ColorTheme.SecondaryBackground2;
                 }
 
                 // Labels
@@ -92,5 +87,7 @@ namespace OneFiDiRoad_Fleet_System
                     ApplyTheme(control);
             }
         }
+
+       
     }
 }

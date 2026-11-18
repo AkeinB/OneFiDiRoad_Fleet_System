@@ -29,63 +29,207 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.LB_ManageUsers = new System.Windows.Forms.Label();
+            this.LB_Home = new System.Windows.Forms.Label();
+            this.LB_Vehicles = new System.Windows.Forms.Label();
+            this.LB_Drivers = new System.Windows.Forms.Label();
+            this.LB_Assingments = new System.Windows.Forms.Label();
+            this.LB_Trips = new System.Windows.Forms.Label();
+            this.LB_Fuel = new System.Windows.Forms.Label();
+            this.LB_Maintenance = new System.Windows.Forms.Label();
+            this.LB_ServiceSchedule = new System.Windows.Forms.Label();
+            this.LB_Incidents = new System.Windows.Forms.Label();
+            this.LB_Reports = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PB_Logo = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.PL_MainContent = new System.Windows.Forms.Panel();
             this.PL_UserBar = new System.Windows.Forms.Panel();
             this.LB_DisplayUserRoles = new System.Windows.Forms.Label();
-            this.LB_DisplayUserName = new System.Windows.Forms.Label();
             this.PB_DisplayRoleImage = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.LB_DisplayUserName = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Logo)).BeginInit();
             this.PL_UserBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_DisplayRoleImage)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.LB_ManageUsers, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.LB_Home, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LB_Vehicles, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.LB_Drivers, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.LB_Assingments, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.LB_Trips, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.LB_Fuel, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.LB_Maintenance, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.LB_ServiceSchedule, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.LB_Incidents, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.LB_Reports, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 12;
+            this.tableLayoutPanel1.RowCount = 13;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 161F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.00387F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.999568F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.99957F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.99957F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.99957F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.99957F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.99957F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.99957F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.99957F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.99957F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.094427F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090516F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090518F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090518F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090518F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090518F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090518F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090518F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090518F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090518F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(228, 951);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // LB_ManageUsers
+            // 
+            this.LB_ManageUsers.AutoSize = true;
+            this.LB_ManageUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LB_ManageUsers.Location = new System.Drawing.Point(3, 561);
+            this.LB_ManageUsers.Name = "LB_ManageUsers";
+            this.LB_ManageUsers.Size = new System.Drawing.Size(222, 40);
+            this.LB_ManageUsers.TabIndex = 12;
+            this.LB_ManageUsers.Text = "Manage Users";
+            this.LB_ManageUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LB_ManageUsers.Click += new System.EventHandler(this.LB_ManageUsers_Click);
+            // 
+            // LB_Home
+            // 
+            this.LB_Home.AutoSize = true;
+            this.LB_Home.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LB_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Home.Location = new System.Drawing.Point(3, 161);
+            this.LB_Home.Name = "LB_Home";
+            this.LB_Home.Size = new System.Drawing.Size(222, 40);
+            this.LB_Home.TabIndex = 1;
+            this.LB_Home.Text = "Home";
+            this.LB_Home.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LB_Home.Click += new System.EventHandler(this.LB_Home_Click);
+            // 
+            // LB_Vehicles
+            // 
+            this.LB_Vehicles.AutoSize = true;
+            this.LB_Vehicles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LB_Vehicles.Location = new System.Drawing.Point(3, 201);
+            this.LB_Vehicles.Name = "LB_Vehicles";
+            this.LB_Vehicles.Size = new System.Drawing.Size(222, 40);
+            this.LB_Vehicles.TabIndex = 2;
+            this.LB_Vehicles.Text = "Vehicles";
+            this.LB_Vehicles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LB_Vehicles.Click += new System.EventHandler(this.LB_Vehicles_Click);
+            // 
+            // LB_Drivers
+            // 
+            this.LB_Drivers.AutoSize = true;
+            this.LB_Drivers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LB_Drivers.Location = new System.Drawing.Point(3, 241);
+            this.LB_Drivers.Name = "LB_Drivers";
+            this.LB_Drivers.Size = new System.Drawing.Size(222, 40);
+            this.LB_Drivers.TabIndex = 3;
+            this.LB_Drivers.Text = "Drivers";
+            this.LB_Drivers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LB_Drivers.Click += new System.EventHandler(this.LB_Drivers_Click);
+            // 
+            // LB_Assingments
+            // 
+            this.LB_Assingments.AutoSize = true;
+            this.LB_Assingments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LB_Assingments.Location = new System.Drawing.Point(3, 281);
+            this.LB_Assingments.Name = "LB_Assingments";
+            this.LB_Assingments.Size = new System.Drawing.Size(222, 40);
+            this.LB_Assingments.TabIndex = 4;
+            this.LB_Assingments.Text = "Assignements";
+            this.LB_Assingments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LB_Assingments.Click += new System.EventHandler(this.LB_Assingments_Click);
+            // 
+            // LB_Trips
+            // 
+            this.LB_Trips.AutoSize = true;
+            this.LB_Trips.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LB_Trips.Location = new System.Drawing.Point(3, 321);
+            this.LB_Trips.Name = "LB_Trips";
+            this.LB_Trips.Size = new System.Drawing.Size(222, 40);
+            this.LB_Trips.TabIndex = 5;
+            this.LB_Trips.Text = "Trips";
+            this.LB_Trips.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LB_Trips.Click += new System.EventHandler(this.LB_Trips_Click);
+            // 
+            // LB_Fuel
+            // 
+            this.LB_Fuel.AutoSize = true;
+            this.LB_Fuel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LB_Fuel.Location = new System.Drawing.Point(3, 361);
+            this.LB_Fuel.Name = "LB_Fuel";
+            this.LB_Fuel.Size = new System.Drawing.Size(222, 40);
+            this.LB_Fuel.TabIndex = 6;
+            this.LB_Fuel.Text = "Fuel";
+            this.LB_Fuel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LB_Fuel.Click += new System.EventHandler(this.LB_Fuel_Click);
+            // 
+            // LB_Maintenance
+            // 
+            this.LB_Maintenance.AutoSize = true;
+            this.LB_Maintenance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LB_Maintenance.Location = new System.Drawing.Point(3, 401);
+            this.LB_Maintenance.Name = "LB_Maintenance";
+            this.LB_Maintenance.Size = new System.Drawing.Size(222, 40);
+            this.LB_Maintenance.TabIndex = 7;
+            this.LB_Maintenance.Text = "Maintenance";
+            this.LB_Maintenance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LB_Maintenance.Click += new System.EventHandler(this.LB_Maintenance_Click);
+            // 
+            // LB_ServiceSchedule
+            // 
+            this.LB_ServiceSchedule.AutoSize = true;
+            this.LB_ServiceSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LB_ServiceSchedule.Location = new System.Drawing.Point(3, 441);
+            this.LB_ServiceSchedule.Name = "LB_ServiceSchedule";
+            this.LB_ServiceSchedule.Size = new System.Drawing.Size(222, 40);
+            this.LB_ServiceSchedule.TabIndex = 8;
+            this.LB_ServiceSchedule.Text = "Service Schedule";
+            this.LB_ServiceSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LB_ServiceSchedule.Click += new System.EventHandler(this.LB_ServiceSchedule_Click);
+            // 
+            // LB_Incidents
+            // 
+            this.LB_Incidents.AutoSize = true;
+            this.LB_Incidents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LB_Incidents.Location = new System.Drawing.Point(3, 481);
+            this.LB_Incidents.Name = "LB_Incidents";
+            this.LB_Incidents.Size = new System.Drawing.Size(222, 40);
+            this.LB_Incidents.TabIndex = 9;
+            this.LB_Incidents.Text = "Incidents";
+            this.LB_Incidents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LB_Incidents.Click += new System.EventHandler(this.LB_Incidents_Click);
+            // 
+            // LB_Reports
+            // 
+            this.LB_Reports.AutoSize = true;
+            this.LB_Reports.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LB_Reports.Location = new System.Drawing.Point(3, 521);
+            this.LB_Reports.Name = "LB_Reports";
+            this.LB_Reports.Size = new System.Drawing.Size(222, 40);
+            this.LB_Reports.TabIndex = 10;
+            this.LB_Reports.Text = "Reports";
+            this.LB_Reports.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LB_Reports.Click += new System.EventHandler(this.LB_Reports_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.PB_Logo);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(222, 155);
+            this.panel1.TabIndex = 11;
             // 
             // PB_Logo
             // 
@@ -94,119 +238,6 @@
             this.PB_Logo.Size = new System.Drawing.Size(138, 109);
             this.PB_Logo.TabIndex = 0;
             this.PB_Logo.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 161);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 44);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.MouseEnter += new System.EventHandler(this.label2_MouseEnter);
-            this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 205);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 44);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(3, 249);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(222, 44);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(3, 293);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 44);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(3, 337);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(222, 44);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(3, 381);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(222, 44);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(3, 425);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(222, 44);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "label8";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(3, 469);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(222, 44);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "label9";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(3, 513);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(222, 44);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "label10";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(3, 557);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(222, 44);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "label11";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PL_MainContent
             // 
@@ -239,6 +270,14 @@
             this.LB_DisplayUserRoles.TabIndex = 5;
             this.LB_DisplayUserRoles.Text = "Display User Role";
             // 
+            // PB_DisplayRoleImage
+            // 
+            this.PB_DisplayRoleImage.Location = new System.Drawing.Point(20, 12);
+            this.PB_DisplayRoleImage.Name = "PB_DisplayRoleImage";
+            this.PB_DisplayRoleImage.Size = new System.Drawing.Size(138, 75);
+            this.PB_DisplayRoleImage.TabIndex = 3;
+            this.PB_DisplayRoleImage.TabStop = false;
+            // 
             // LB_DisplayUserName
             // 
             this.LB_DisplayUserName.AutoSize = true;
@@ -249,22 +288,6 @@
             this.LB_DisplayUserName.TabIndex = 4;
             this.LB_DisplayUserName.Text = "Display User Name";
             // 
-            // PB_DisplayRoleImage
-            // 
-            this.PB_DisplayRoleImage.Location = new System.Drawing.Point(20, 12);
-            this.PB_DisplayRoleImage.Name = "PB_DisplayRoleImage";
-            this.PB_DisplayRoleImage.Size = new System.Drawing.Size(138, 75);
-            this.PB_DisplayRoleImage.TabIndex = 3;
-            this.PB_DisplayRoleImage.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.PB_Logo);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 155);
-            this.panel1.TabIndex = 11;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,18 +296,18 @@
             this.Controls.Add(this.PL_UserBar);
             this.Controls.Add(this.PL_MainContent);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(1235, 761);
+            this.MinimumSize = new System.Drawing.Size(1543, 990);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainWindow";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Logo)).EndInit();
             this.PL_UserBar.ResumeLayout(false);
             this.PL_UserBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_DisplayRoleImage)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -295,19 +318,20 @@
         private System.Windows.Forms.Panel PL_MainContent;
         private System.Windows.Forms.Panel PL_UserBar;
         private System.Windows.Forms.PictureBox PB_Logo;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label LB_Home;
+        private System.Windows.Forms.Label LB_Vehicles;
+        private System.Windows.Forms.Label LB_Drivers;
+        private System.Windows.Forms.Label LB_Assingments;
+        private System.Windows.Forms.Label LB_Trips;
+        private System.Windows.Forms.Label LB_Fuel;
+        private System.Windows.Forms.Label LB_Maintenance;
+        private System.Windows.Forms.Label LB_ServiceSchedule;
+        private System.Windows.Forms.Label LB_Incidents;
+        private System.Windows.Forms.Label LB_Reports;
         private System.Windows.Forms.Label LB_DisplayUserRoles;
         private System.Windows.Forms.Label LB_DisplayUserName;
         private System.Windows.Forms.PictureBox PB_DisplayRoleImage;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label LB_ManageUsers;
     }
 }

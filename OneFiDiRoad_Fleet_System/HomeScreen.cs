@@ -21,7 +21,7 @@ namespace OneFiDiRoad_Fleet_System
             GB_Vehicles.MouseEnter += (s, e) => Utils.AnimateGroupBoxStart(GB_Vehicles);
             GB_Vehicles.MouseLeave += (s, e) => Utils.AnimateGroupBoxStop(GB_Vehicles);
 
-            Utils.hoverTimerGBs.Interval = 10;
+            Utils.hoverTimerGBs.Interval = 15;
             Utils.hoverTimerGBs.Tick += Utils.HoverTimer_TickGroupBox;
             Theme.ApplyTheme(this);
 

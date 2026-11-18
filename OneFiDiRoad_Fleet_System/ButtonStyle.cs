@@ -29,4 +29,17 @@ namespace OneFiDiRoad_Fleet_System
             base.OnPaint(pevent);
         }
     }
+
+    public class groupboxstyle: GroupBox
+    {
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            // Draw the border
+            using (Pen pen = new Pen(Theme.ColorTheme.SecondaryBackground2, 2))
+            {
+                e.Graphics.DrawRectangle(pen, 0, 0, Width - 1, Height - 1);
+            }
+        }
+    }
 }
