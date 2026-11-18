@@ -15,6 +15,7 @@ namespace OneFiDiRoad_Fleet_System
         private readonly ONE_FI_DI_ROAD_DBEntities OneFiDiRoad;
         private readonly Login _loginForm;
         private readonly User _userinfo;
+        private UserControl currentScreen;
 
         public MainWindow(Login loginForm, User userinfo)
         {
@@ -132,12 +133,14 @@ namespace OneFiDiRoad_Fleet_System
         private void LB_Home_Click(object sender, EventArgs e)
         {
             ShowScreen(new HomeScreen1());
+            Utils.SetActiveLabel(LB_Home);
         }
 
         
         private void LB_Vehicles_Click(object sender, EventArgs e)
         {
             ShowScreen(new UC_Vehicles());
+            Utils.SetActiveLabel(LB_Vehicles);
         }
 
         private void LB_Drivers_Click(object sender, EventArgs e)
@@ -189,6 +192,10 @@ namespace OneFiDiRoad_Fleet_System
         //helper method to show a new screen in the main content panel
         public void ShowScreen(UserControl newScreen)
         {
+           
+            if (currentScreen?.GetType() == newScreen.GetType())
+                return;
+
             // Dispose of the current screen if it exists
             if (PL_MainContent.Controls.Count > 0)
             {
@@ -203,6 +210,8 @@ namespace OneFiDiRoad_Fleet_System
 
             // Inject the new screen into the panel
             PL_MainContent.Controls.Add(newScreen);
+
+            currentScreen = newScreen;
 
         }
 

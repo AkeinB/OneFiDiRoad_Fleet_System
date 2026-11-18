@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
+using static OneFiDiRoad_Fleet_System.Theme;
 
 
 namespace OneFiDiRoad_Fleet_System
@@ -82,12 +83,20 @@ namespace OneFiDiRoad_Fleet_System
             originalBackColor = lbl.BackColor;
             originalForeColor = lbl.ForeColor;
 
-            lbl.BackColor = System.Drawing.Color.Yellow;
-            lbl.ForeColor = System.Drawing.Color.Black;
+            // If the label is already active, do not change its color
+            if (lbl == activeLabel)
+                return;
+
+            lbl.BackColor = ColorTheme.SecondaryBackground2;
+            lbl.ForeColor = ColorTheme.TextPrimary;
         }
 
         public static void RestoreLabel(Label lbl)
         {
+            // If the label is already active, do not change its color
+            if (lbl == activeLabel)
+                return; 
+
             lbl.BackColor = originalBackColor;
             lbl.ForeColor = originalForeColor;
         }
@@ -213,8 +222,8 @@ namespace OneFiDiRoad_Fleet_System
             }
 
             activeLabel = lbl;
-            activeLabel.BackColor = System.Drawing.Color.Yellow;
-            activeLabel.ForeColor = System.Drawing.Color.Black;
+            activeLabel.BackColor = ColorTheme.SecondaryBackground2;
+            activeLabel.ForeColor = ColorTheme.TextPrimary;
         }
     }
 }
