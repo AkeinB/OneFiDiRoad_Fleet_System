@@ -16,13 +16,16 @@ namespace OneFiDiRoad_Fleet_System
         private readonly Login _loginForm;
         private readonly User _userinfo;
         private UserControl currentScreen;
+        public Label VehiclesLabel => LB_Vehicles;
+        public Label DriversLabel => LB_Drivers;
+        public Label TripsLabel => LB_Trips;
 
         public MainWindow(Login loginForm, User userinfo)
         {
             InitializeComponent();
             this.FormClosing += new FormClosingEventHandler(MainWindow_FormClosing);
             OneFiDiRoad = new ONE_FI_DI_ROAD_DBEntities();
-            ShowScreen(new HomeScreen1());
+            ShowScreen(new HomeScreen1(this), LB_Home);
             Theme.ApplyTheme(this);
             _loginForm = loginForm;
             _userinfo = userinfo;
@@ -93,6 +96,8 @@ namespace OneFiDiRoad_Fleet_System
             LB_DisplayUserName.Text = _userinfo.FirstName + " " + _userinfo.LastName;
             LB_DisplayUserRoles.Text = _userinfo.Role;
 
+            LB_Home.BackColor = Theme.ColorTheme.SecondaryBackground2;
+
             // Set the interval for the hover timer and attach the Tick event handler
             Utils.hoverTimer.Interval = 15;
             Utils.hoverTimer.Tick += Utils.HoverTimer_TickLabels;
@@ -132,69 +137,80 @@ namespace OneFiDiRoad_Fleet_System
 
         private void LB_Home_Click(object sender, EventArgs e)
         {
-            ShowScreen(new HomeScreen1());
-            Utils.SetActiveLabel(LB_Home);
+            ShowScreen(new HomeScreen1(this), LB_Home);
+            
         }
 
         
         private void LB_Vehicles_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_Vehicles());
-            Utils.SetActiveLabel(LB_Vehicles);
+            ShowScreen(new UC_Vehicles(), LB_Vehicles);
+            
         }
 
         private void LB_Drivers_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_Drivers());
+            ShowScreen(new UC_Drivers(), LB_Drivers);
+            
         }
 
         private void LB_Assingments_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_Assignments());
+            ShowScreen(new UC_Assignments(), LB_Assingments);
+            
         }
 
         private void LB_Trips_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_Trips());
+            ShowScreen(new UC_Trips(), LB_Trips);
+            
         }
 
         private void LB_Fuel_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_FuelManagement());
+            ShowScreen(new UC_FuelManagement(), LB_Fuel);
+            
         }
 
         private void LB_Maintenance_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_Maintenance());
+            ShowScreen(new UC_Maintenance(), LB_Maintenance);
+            
         }
 
         private void LB_ServiceSchedule_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_ServiceShedule());
+            ShowScreen(new UC_ServiceShedule(), LB_ServiceSchedule);
+            
         }
 
         private void LB_Incidents_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_IncidentManagement());
+            ShowScreen(new UC_IncidentManagement(), LB_Incidents);
+            
         }
 
         private void LB_Reports_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_Reports());
+            ShowScreen(new UC_Reports(), LB_Reports);
+            
         }
 
         private void LB_ManageUsers_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_ManageUsers());
+            ShowScreen(new UC_ManageUsers(), LB_ManageUsers);
         }
 
         //======================================================================================================================================================
         //helper method to show a new screen in the main content panel
-        public void ShowScreen(UserControl newScreen)
+        public void ShowScreen(UserControl newScreen, Label navLabel)
         {
            
             if (currentScreen?.GetType() == newScreen.GetType())
                 return;
+
+            // Highlight the active label
+            Utils.SetActiveLabel(navLabel);
 
             // Dispose of the current screen if it exists
             if (PL_MainContent.Controls.Count > 0)

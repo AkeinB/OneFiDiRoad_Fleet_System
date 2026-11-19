@@ -15,6 +15,7 @@ namespace OneFiDiRoad_Fleet_System
         public UC_Vehicles()
         {
             InitializeComponent();
+            this.BackColor = Theme.ColorTheme.SecondaryBackground2;
         }
     }
 }
