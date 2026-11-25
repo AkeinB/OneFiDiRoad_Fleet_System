@@ -241,7 +241,6 @@
             // 
             // PL_MainContent
             // 
-            this.PL_MainContent.AutoScroll = true;
             this.PL_MainContent.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.PL_MainContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PL_MainContent.Location = new System.Drawing.Point(228, 0);
@@ -292,6 +291,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1527, 951);
             this.Controls.Add(this.PL_UserBar);
             this.Controls.Add(this.PL_MainContent);
@@ -299,7 +299,7 @@
             this.MinimumSize = new System.Drawing.Size(1543, 990);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainWindow";
+            this.Text = "One FI DI Road Fleet System";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

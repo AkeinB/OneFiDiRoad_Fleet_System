@@ -87,7 +87,7 @@ namespace OneFiDiRoad_Fleet_System
             if (lbl == activeLabel)
                 return;
 
-            lbl.BackColor = ColorTheme.SecondaryBackground2;
+            lbl.BackColor = ColorTheme.SelectionBackground;
             lbl.ForeColor = ColorTheme.TextPrimary;
         }
 
@@ -222,7 +222,7 @@ namespace OneFiDiRoad_Fleet_System
             }
 
             activeLabel = lbl;
-            activeLabel.BackColor = ColorTheme.SecondaryBackground2;
+            activeLabel.BackColor = ColorTheme.SelectionBackground;
             activeLabel.ForeColor = ColorTheme.TextPrimary;
         }
     }

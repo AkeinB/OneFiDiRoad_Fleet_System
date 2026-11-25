@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+
 
 namespace OneFiDiRoad_Fleet_System
 {
@@ -19,6 +22,18 @@ namespace OneFiDiRoad_Fleet_System
         public Label VehiclesLabel => LB_Vehicles;
         public Label DriversLabel => LB_Drivers;
         public Label TripsLabel => LB_Trips;
+        public Label FuelLabel => LB_Fuel;
+        public Label ServiceScheduleLabel => LB_ServiceSchedule;
+
+
+        [DllImport("dwmapi.dll")]
+        private static extern int DwmSetWindowAttribute(
+        IntPtr hwnd,
+        int attr,
+        ref int attrValue,
+        int attrSize);
+
+        private const int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
 
         public MainWindow(Login loginForm, User userinfo)
         {
@@ -29,6 +44,8 @@ namespace OneFiDiRoad_Fleet_System
             Theme.ApplyTheme(this);
             _loginForm = loginForm;
             _userinfo = userinfo;
+
+            
 
             //======================================================================================================================================================
             //Mouse enter and leave events for labels to highlight them
@@ -96,13 +113,19 @@ namespace OneFiDiRoad_Fleet_System
             LB_DisplayUserName.Text = _userinfo.FirstName + " " + _userinfo.LastName;
             LB_DisplayUserRoles.Text = _userinfo.Role;
 
+            if (_userinfo.Role == "Staff")
+            {
+                LB_ManageUsers.Visible = false;
+            }
+
+            // Set the background color of the Home label to indicate it's the active screen
             LB_Home.BackColor = Theme.ColorTheme.SecondaryBackground2;
 
             // Set the interval for the hover timer and attach the Tick event handler
             Utils.hoverTimer.Interval = 15;
             Utils.hoverTimer.Tick += Utils.HoverTimer_TickLabels;
 
-
+            
         }
 
         // event handler to close open forms when the main window is closed
@@ -205,7 +228,7 @@ namespace OneFiDiRoad_Fleet_System
         //helper method to show a new screen in the main content panel
         public void ShowScreen(UserControl newScreen, Label navLabel)
         {
-           
+            // Check if the new screen is the same as the current screen
             if (currentScreen?.GetType() == newScreen.GetType())
                 return;
 
@@ -222,7 +245,7 @@ namespace OneFiDiRoad_Fleet_System
             PL_MainContent.Controls.Clear();
 
             //Make the new screen stretch to fill the panel completely
-            newScreen.Dock = DockStyle.Fill;
+            //newScreen.Dock = DockStyle.Fill;
 
             // Inject the new screen into the panel
             PL_MainContent.Controls.Add(newScreen);
@@ -230,6 +253,17 @@ namespace OneFiDiRoad_Fleet_System
             currentScreen = newScreen;
 
         }
+        //protected override void OnHandleCreated(EventArgs e)
+        //{
+        //    base.OnHandleCreated(e);
 
+        //    int useDarkMode = 1;
+
+        //    DwmSetWindowAttribute(
+        //        this.Handle,
+        //        DWMWA_USE_IMMERSIVE_DARK_MODE,
+        //        ref useDarkMode,
+        //        sizeof(int));
+        //}
     }
 }

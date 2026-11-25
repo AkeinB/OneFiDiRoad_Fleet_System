@@ -15,6 +15,20 @@ namespace OneFiDiRoad_Fleet_System
         public UC_ManageUsers()
         {
             InitializeComponent();
+
+            Theme.ApplyTheme(this);
+            this.BackColor = Theme.ColorTheme.SecondaryBackground2;
         }
+
+        private void UC_ManageUsers_Load(object sender, EventArgs e)
+        {
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.BackgroundColor = Theme.ColorTheme.SecondaryBackground2;
+
+
+            
+        }
+
+       
     }
 }

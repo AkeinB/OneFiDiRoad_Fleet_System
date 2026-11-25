@@ -86,12 +86,11 @@
             this.GB_VehiclesDueForService.Controls.Add(this.PB_ServiceDue);
             this.GB_VehiclesDueForService.Controls.Add(this.TLP_ServiceDue);
             this.GB_VehiclesDueForService.Controls.Add(this.LB_TitleServiceDue);
-            this.GB_VehiclesDueForService.Location = new System.Drawing.Point(704, 394);
+            this.GB_VehiclesDueForService.Location = new System.Drawing.Point(708, 383);
             this.GB_VehiclesDueForService.Name = "GB_VehiclesDueForService";
             this.GB_VehiclesDueForService.Size = new System.Drawing.Size(462, 160);
             this.GB_VehiclesDueForService.TabIndex = 11;
             this.GB_VehiclesDueForService.TabStop = false;
-          
             // 
             // PB_ServiceDue
             // 
@@ -138,12 +137,11 @@
             this.GB_FuelCostThisMonth.Controls.Add(this.PB_FuelCost);
             this.GB_FuelCostThisMonth.Controls.Add(this.TLP_FuelCostMonth);
             this.GB_FuelCostThisMonth.Controls.Add(this.LB_TitleFuelCostMonth);
-            this.GB_FuelCostThisMonth.Location = new System.Drawing.Point(132, 585);
+            this.GB_FuelCostThisMonth.Location = new System.Drawing.Point(127, 574);
             this.GB_FuelCostThisMonth.Name = "GB_FuelCostThisMonth";
             this.GB_FuelCostThisMonth.Size = new System.Drawing.Size(462, 160);
             this.GB_FuelCostThisMonth.TabIndex = 10;
             this.GB_FuelCostThisMonth.TabStop = false;
-            
             // 
             // PB_FuelCost
             // 
@@ -201,12 +199,11 @@
             this.GB_TripsThisMonth.Controls.Add(this.PB_Trips);
             this.GB_TripsThisMonth.Controls.Add(this.TLP_TripsMonth);
             this.GB_TripsThisMonth.Controls.Add(this.LB_TitleTrips);
-            this.GB_TripsThisMonth.Location = new System.Drawing.Point(132, 394);
+            this.GB_TripsThisMonth.Location = new System.Drawing.Point(127, 383);
             this.GB_TripsThisMonth.Name = "GB_TripsThisMonth";
             this.GB_TripsThisMonth.Size = new System.Drawing.Size(462, 160);
             this.GB_TripsThisMonth.TabIndex = 9;
             this.GB_TripsThisMonth.TabStop = false;
-            
             // 
             // PB_Trips
             // 
@@ -264,12 +261,11 @@
             this.GB_Drivers.Controls.Add(this.TLP_Drivers);
             this.GB_Drivers.Controls.Add(this.LB_TitleDrivers);
             this.GB_Drivers.Controls.Add(this.PB_Drivers);
-            this.GB_Drivers.Location = new System.Drawing.Point(704, 207);
+            this.GB_Drivers.Location = new System.Drawing.Point(708, 196);
             this.GB_Drivers.Name = "GB_Drivers";
             this.GB_Drivers.Size = new System.Drawing.Size(462, 160);
             this.GB_Drivers.TabIndex = 8;
             this.GB_Drivers.TabStop = false;
-            
             // 
             // TLP_Drivers
             // 
@@ -438,12 +434,11 @@
             this.GB_Vehicles.Controls.Add(this.LB_TitleVehicles);
             this.GB_Vehicles.Controls.Add(this.TLP_Vehicles);
             this.GB_Vehicles.Controls.Add(this.PB_Vehicles);
-            this.GB_Vehicles.Location = new System.Drawing.Point(132, 207);
+            this.GB_Vehicles.Location = new System.Drawing.Point(127, 196);
             this.GB_Vehicles.Name = "GB_Vehicles";
             this.GB_Vehicles.Size = new System.Drawing.Size(462, 160);
             this.GB_Vehicles.TabIndex = 13;
             this.GB_Vehicles.TabStop = false;
-            
             // 
             // HomeScreen1
             // 

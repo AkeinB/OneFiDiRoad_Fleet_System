@@ -19,6 +19,10 @@ namespace OneFiDiRoad_Fleet_System
             public static Color SecondaryBackground2 = Color.FromArgb(43, 45, 49);
             public static Color TertiaryBackground = Color.FromArgb(30, 31, 34);
 
+            //Selection
+            public static Color SelectionBackground = Color.FromArgb(43, 45, 49);
+            public static Color HoverBackground = Color.FromArgb(39, 43, 46);
+
             // Accent
             public static Color Primary = Color.FromArgb(88, 101, 242);
 

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static OneFiDiRoad_Fleet_System.Theme;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using System.Drawing.Drawing2D;
 
 namespace OneFiDiRoad_Fleet_System
 {
@@ -27,9 +29,30 @@ namespace OneFiDiRoad_Fleet_System
             Theme.ApplyTheme(this);
             this.BackColor = ColorTheme.SecondaryBackground2;
 
+            this.DoubleBuffered = true;
+            this.ResizeRedraw = true;
+
+
+            // allows theVehicle's group box and its child controls to be clickable and navigate to the Vehicles screen when clicked
             RegisterCardClick(
                 GB_Vehicles,
                 () => _mainWindow.ShowScreen(new UC_Vehicles(), _mainWindow.VehiclesLabel));
+
+            RegisterCardClick(
+                GB_Drivers,
+                () => _mainWindow.ShowScreen(new UC_Drivers(), _mainWindow.DriversLabel));
+
+            RegisterCardClick(
+                GB_TripsThisMonth,
+                () => _mainWindow.ShowScreen(new UC_Trips(), _mainWindow.TripsLabel));
+
+            RegisterCardClick(
+                GB_VehiclesDueForService,
+                () => _mainWindow.ShowScreen(new UC_Vehicles(), _mainWindow.ServiceScheduleLabel));
+
+            RegisterCardClick(
+                GB_FuelCostThisMonth,
+                () => _mainWindow.ShowScreen(new UC_FuelManagement(), _mainWindow.FuelLabel));
 
             //=============================================================================================================================================
             //MouseEnter and MouseLeave events to highlight the groupbox when hovering over it or its child controls
@@ -110,10 +133,6 @@ namespace OneFiDiRoad_Fleet_System
             TLP_FuelCostMonth.MouseEnter += (s, e) => Utils.AnimateGroupBoxStart(GB_FuelCostThisMonth);
             TLP_FuelCostMonth.MouseLeave += (s, e) => Utils.AnimateGroupBoxStop(GB_FuelCostThisMonth);
 
-
-
-
-
         }
 
         private void HomeScreen1_Load(object sender, EventArgs e)
@@ -121,7 +140,7 @@ namespace OneFiDiRoad_Fleet_System
             var vehicles = OneFiDiRoad.Vehicles;
             var drivers = OneFiDiRoad.Drivers;
             var trips = OneFiDiRoad.Trips;
-
+            ApplyThemeTableLayoutPanel();
             
 
             // Update the labels with the counts of total and available vehicles
@@ -138,8 +157,8 @@ namespace OneFiDiRoad_Fleet_System
 
 
         }
-        
-        // helper 
+
+        // This method registers a click event for a group box and its child controls, allowing navigation to the specified screen when clicked
         private void RegisterCardClick(Control control, Action action)
         {
             control.Click += (s, e) => action();
@@ -150,7 +169,32 @@ namespace OneFiDiRoad_Fleet_System
             }
         }
 
+        public void ApplyThemeTableLayoutPanel()
+        {
+            TLP_Drivers.BackColor = ColorTheme.SecondaryBackground2;
+            TLP_Vehicles.BackColor = ColorTheme.SecondaryBackground2;
+            TLP_TripsMonth.BackColor = ColorTheme.SecondaryBackground2;
+            TLP_FuelCostMonth.BackColor = ColorTheme.SecondaryBackground2;
+            TLP_ServiceDue.BackColor = ColorTheme.SecondaryBackground2;
 
+        }
+
+        //protected override void OnPaintBackground(PaintEventArgs e)
+        //{
+        //    // Guard against minimized window states (0 width or height throws an OutOfMemoryException)
+        //    if (this.ClientRectangle.Width == 0 || this.ClientRectangle.Height == 0)
+        //        return;
+
+        //    // Define colors and angle (e.g., 45f for diagonal, 90f for vertical, 0f for horizontal)
+        //    Color startColor = Color.FromArgb(41, 128, 185); // Blue
+        //    Color endColor = Color.FromArgb(142, 68, 173);   // Purple
+        //    float angle = 45f;
+
+        //    using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, startColor, endColor, angle))
+        //    {
+        //        e.Graphics.FillRectangle(brush, this.ClientRectangle);
+        //    }
+        //}
 
     }
 }

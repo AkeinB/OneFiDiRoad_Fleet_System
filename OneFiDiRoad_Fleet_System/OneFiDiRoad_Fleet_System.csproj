@@ -230,6 +230,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
@@ -313,6 +314,9 @@
       <DependentUpon>OneFiDiRoad_Fleet_SystemDB.edmx</DependentUpon>
       <LastGenOutput>OneFiDiRoad_Fleet_SystemDB.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
