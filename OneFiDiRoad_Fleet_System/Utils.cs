@@ -18,6 +18,8 @@ namespace OneFiDiRoad_Fleet_System
         public static Label activeLabel;
         public static GroupBox activeGroupBox;
         public static Point originalLocation;
+        public static readonly Dictionary<GroupBox, Point> OriginalPositions = new Dictionary<GroupBox, Point>();
+        public static readonly HashSet<GroupBox> hoveredCards = new HashSet<GroupBox>();
         public static Point targetLocation;
         public static bool growing;
         public static bool isHovering;
@@ -155,12 +157,27 @@ namespace OneFiDiRoad_Fleet_System
         // Animate the group box when hovered over
         public static void AnimateGroupBoxStart(GroupBox gb)
         {
-            originalGroupBoxBackColor = gb.BackColor;
-            originalLocation = gb.Location;
+            //originalGroupBoxBackColor = gb.BackColor;
+
+            // if already hovering, do not move again
+            if (hoveredCards.Contains(gb))
+            {
+                return;
+            }
+            // save original position once
+            if (!OriginalPositions.ContainsKey(gb))
+            {
+                OriginalPositions[gb] = gb.Location;
+            }
+
+            // Mark this GroupBox as currently hovered so it won't be animated again until the mouse leaves
+            hoveredCards.Add(gb);
+
+            Point original = OriginalPositions[gb];
 
             gb.Location = new Point(
-                gb.Location.X,
-                gb.Location.Y - 5);
+                original.X,
+                original.Y - 5);
 
             isHovering = true;
             //gb.BackColor = System.Drawing.Color.LightYellow;
@@ -168,10 +185,18 @@ namespace OneFiDiRoad_Fleet_System
 
         public static void AnimateGroupBoxStop(GroupBox gb)
         {
-            activeGroupBox = gb;
+            
+            if (!hoveredCards.Contains(gb))
+            {
+                return;
+            }
+            hoveredCards.Remove(gb);
 
-            gb.Location = originalLocation;
-            isHovering = false;
+            if (OriginalPositions.ContainsKey(gb))
+            {
+                gb.Location = OriginalPositions[gb];
+            }
+            
             //gb.BackColor = originalGroupBoxBackColor;
         }
 

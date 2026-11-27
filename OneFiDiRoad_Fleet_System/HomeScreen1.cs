@@ -140,6 +140,8 @@ namespace OneFiDiRoad_Fleet_System
             var vehicles = OneFiDiRoad.Vehicles;
             var drivers = OneFiDiRoad.Drivers;
             var trips = OneFiDiRoad.Trips;
+            var FuelCost = OneFiDiRoad.Fuels;
+            var ForService = OneFiDiRoad.ServiceSchedules;
             ApplyThemeTableLayoutPanel();
             
 
@@ -155,6 +157,11 @@ namespace OneFiDiRoad_Fleet_System
             LB_MonthAmount.Text = trips.Count().ToString();
             LB_Month.Text = DateTime.Now.ToString("MMMM yyyy");
 
+            // Update the labels with the Sum of total cost this month
+            decimal total = FuelCost.Where(m => m.FuelDate.Year == DateTime.Now.Year && m.FuelDate.Month == DateTime.Now.Month)
+                .Sum(t => (decimal)t.TotalCostJMD);
+            LB_Cost.Text = total.ToString();
+
 
         }
 
@@ -169,6 +176,7 @@ namespace OneFiDiRoad_Fleet_System
             }
         }
 
+        //Handles colors for tablelayoutpanle
         public void ApplyThemeTableLayoutPanel()
         {
             TLP_Drivers.BackColor = ColorTheme.SecondaryBackground2;

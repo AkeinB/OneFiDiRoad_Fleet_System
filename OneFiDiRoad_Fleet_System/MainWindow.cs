@@ -228,29 +228,38 @@ namespace OneFiDiRoad_Fleet_System
         //helper method to show a new screen in the main content panel
         public void ShowScreen(UserControl newScreen, Label navLabel)
         {
-            // Check if the new screen is the same as the current screen
-            if (currentScreen?.GetType() == newScreen.GetType())
-                return;
-
-            // Highlight the active label
-            Utils.SetActiveLabel(navLabel);
-
-            // Dispose of the current screen if it exists
-            if (PL_MainContent.Controls.Count > 0)
+            try
             {
-                PL_MainContent.Controls[0].Dispose();
+                // Check if the new screen is the same as the current screen
+                if (currentScreen?.GetType() == newScreen.GetType())
+                    return;
+
+                // Highlight the active label
+                Utils.SetActiveLabel(navLabel);
+
+                // Dispose of the current screen if it exists
+                if (PL_MainContent.Controls.Count > 0)
+                {
+                    PL_MainContent.Controls[0].Dispose();
+                }
+
+                //Clear whatever screen is currently showing
+                PL_MainContent.Controls.Clear();
+
+                //Make the new screen stretch to fill the panel completely
+                //newScreen.Dock = DockStyle.Fill;
+
+                // Inject the new screen into the panel
+                PL_MainContent.Controls.Add(newScreen);
+
+                currentScreen = newScreen;
             }
+            catch (Exception)
+            {
 
-            //Clear whatever screen is currently showing
-            PL_MainContent.Controls.Clear();
-
-            //Make the new screen stretch to fill the panel completely
-            //newScreen.Dock = DockStyle.Fill;
-
-            // Inject the new screen into the panel
-            PL_MainContent.Controls.Add(newScreen);
-
-            currentScreen = newScreen;
+                throw;
+            }
+            
 
         }
         //protected override void OnHandleCreated(EventArgs e)
